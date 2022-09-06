@@ -1,0 +1,7 @@
+{
+  "type": "patch",
+  "comment": "add checks before calling event.preventDefault()",
+  "packageName": "@fluentui/utilities",
+  "email": "shawndube@microsoft.com",
+  "dependentChangeType": "patch"
+}
