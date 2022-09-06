@@ -64,13 +64,17 @@ export const allowScrollOnElement = (element: HTMLElement | null, events: EventG
     // if the element is scrolled to the top,
     // prevent the user from scrolling up
     if (_element.scrollTop === 0 && clientY > 0) {
-      event.preventDefault();
+      if (event.cancelable) {
+        event.preventDefault();
+      }
     }
 
     // if the element is scrolled to the bottom,
     // prevent the user from scrolling down
     if (_element.scrollHeight - Math.ceil(_element.scrollTop) <= _element.clientHeight && clientY < 0) {
-      event.preventDefault();
+      if (event.cancelable) {
+        event.preventDefault();
+      }
     }
   };
 
